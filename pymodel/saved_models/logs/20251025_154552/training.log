@@ -1,0 +1,92 @@
+2025-10-25 15:45:52 - INFO - 日志初始化完成，实验名称：20251025_154552
+2025-10-25 15:45:52 - INFO - 日志目录：E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\logs\20251025_154552
+2025-10-25 15:45:52 - INFO - ============================================================
+2025-10-25 15:45:52 - INFO - 开始训练流程
+2025-10-25 15:45:52 - INFO - 设备: cuda
+2025-10-25 15:45:52 - INFO - 批次大小: 64
+2025-10-25 15:45:52 - INFO - 总轮次: 30
+2025-10-25 15:45:52 - INFO - 学习率: 0.0001
+2025-10-25 15:45:52 - INFO - 类别数: 39
+2025-10-25 15:45:52 - INFO - ============================================================
+2025-10-25 15:45:52 - INFO - 可训练参数: 特征层 84, 分类头 2
+2025-10-25 15:45:52 - INFO - 启用混合精度训练(AMP)
+2025-10-25 15:45:52 - INFO - 成功加载checkpoint: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-25 15:45:52 - INFO - 从Epoch 7继续训练，最佳验证准确率: 0.9863
+2025-10-25 15:45:52 - INFO - 
+2025-10-25 15:45:52 - INFO - Epoch 8/30
+2025-10-25 15:45:52 - INFO - ------------------------------------------------------------
+2025-10-25 16:20:15 - INFO - Epoch 8/30 - Train Loss: 0.8292, Train Acc: 0.9634 | Val Loss: 0.7440, Val Acc: 0.9892 | LR: 0.000050
+2025-10-25 16:20:15 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-25 16:20:16 - INFO - 💾 保存最佳模型 - Epoch 8, 验证准确率: 0.9892
+2025-10-25 16:20:16 - INFO - 
+2025-10-25 16:20:16 - INFO - Epoch 9/30
+2025-10-25 16:20:16 - INFO - ------------------------------------------------------------
+2025-10-25 16:54:05 - INFO - Epoch 9/30 - Train Loss: 0.8123, Train Acc: 0.9691 | Val Loss: 0.7408, Val Acc: 0.9886 | LR: 0.000050
+2025-10-25 16:54:05 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-25 16:54:05 - INFO - 验证准确率无提升：连续 1/7 次
+2025-10-25 16:54:05 - INFO - 
+2025-10-25 16:54:05 - INFO - Epoch 10/30
+2025-10-25 16:54:05 - INFO - ------------------------------------------------------------
+2025-10-25 17:29:10 - INFO - Epoch 10/30 - Train Loss: 0.8037, Train Acc: 0.9713 | Val Loss: 0.7336, Val Acc: 0.9901 | LR: 0.000050
+2025-10-25 17:29:10 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-25 17:29:10 - INFO - 💾 保存最佳模型 - Epoch 10, 验证准确率: 0.9901
+2025-10-25 17:29:10 - INFO - 
+2025-10-25 17:29:10 - INFO - Epoch 11/30
+2025-10-25 17:29:10 - INFO - ------------------------------------------------------------
+2025-10-25 18:04:17 - INFO - Epoch 11/30 - Train Loss: 0.7940, Train Acc: 0.9746 | Val Loss: 0.7312, Val Acc: 0.9906 | LR: 0.000050
+2025-10-25 18:04:17 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-25 18:04:17 - INFO - 💾 保存最佳模型 - Epoch 11, 验证准确率: 0.9906
+2025-10-25 18:04:17 - INFO - 
+2025-10-25 18:04:17 - INFO - Epoch 12/30
+2025-10-25 18:04:17 - INFO - ------------------------------------------------------------
+2025-10-25 18:39:20 - INFO - Epoch 12/30 - Train Loss: 0.7881, Train Acc: 0.9760 | Val Loss: 0.7294, Val Acc: 0.9904 | LR: 0.000050
+2025-10-25 18:39:20 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-25 18:39:20 - INFO - 验证准确率无提升：连续 1/7 次
+2025-10-25 18:39:20 - INFO - 
+2025-10-25 18:39:20 - INFO - Epoch 13/30
+2025-10-25 18:39:20 - INFO - ------------------------------------------------------------
+2025-10-25 19:14:21 - INFO - Epoch 13/30 - Train Loss: 0.7815, Train Acc: 0.9779 | Val Loss: 0.7301, Val Acc: 0.9894 | LR: 0.000050
+2025-10-25 19:14:21 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-25 19:14:21 - INFO - 验证准确率无提升：连续 2/7 次
+2025-10-25 19:14:21 - INFO - 
+2025-10-25 19:14:21 - INFO - Epoch 14/30
+2025-10-25 19:14:21 - INFO - ------------------------------------------------------------
+2025-10-25 19:47:53 - INFO - Epoch 14/30 - Train Loss: 0.7906, Train Acc: 0.9728 | Val Loss: 0.7270, Val Acc: 0.9905 | LR: 0.000050
+2025-10-25 19:47:53 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-25 19:47:53 - INFO - 验证准确率无提升：连续 3/7 次
+2025-10-25 19:47:53 - INFO - 
+2025-10-25 19:47:53 - INFO - Epoch 15/30
+2025-10-25 19:47:53 - INFO - ------------------------------------------------------------
+2025-10-25 20:23:08 - INFO - Epoch 15/30 - Train Loss: 0.7898, Train Acc: 0.9717 | Val Loss: 0.7236, Val Acc: 0.9916 | LR: 0.000050
+2025-10-25 20:23:08 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-25 20:23:08 - INFO - 💾 保存最佳模型 - Epoch 15, 验证准确率: 0.9916
+2025-10-25 20:23:08 - INFO - 
+2025-10-25 20:23:08 - INFO - Epoch 16/30
+2025-10-25 20:23:08 - INFO - ------------------------------------------------------------
+2025-10-25 20:45:16 - ERROR - 训练epoch时发生错误: [Errno 2] No such file or directory: 'E:\\Users\\LENOVO\\Desktop\\mtjbysj\\pymodel\\data\\PlantVillage\\Potato___Late_blight\\image (423)_comp.JPG'
+2025-10-25 20:45:16 - ERROR - ❌ 训练过程中发生异常: FileNotFoundError
+2025-10-25 20:45:16 - ERROR - 异常详情: [Errno 2] No such file or directory: 'E:\\Users\\LENOVO\\Desktop\\mtjbysj\\pymodel\\data\\PlantVillage\\Potato___Late_blight\\image (423)_comp.JPG'
+2025-10-25 20:45:16 - ERROR - 堆栈追踪:
+Traceback (most recent call last):
+  File "E:\Users\LENOVO\Desktop\mtjbysj\pymodel\utils\train_utils.py", line 333, in train_model
+    train_loss, train_acc = train_one_epoch(
+  File "E:\Users\LENOVO\Desktop\mtjbysj\pymodel\utils\train_utils.py", line 92, in train_one_epoch
+    raise e
+  File "E:\Users\LENOVO\Desktop\mtjbysj\pymodel\utils\train_utils.py", line 46, in train_one_epoch
+    for batch_idx, (images, labels) in enumerate(pbar):
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\tqdm\std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "E:\Users\LENOVO\Desktop\mtjbysj\pymodel\utils\data_loader.py", line 38, in __getitem__
+    image = Image.open(path).convert('RGB')
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\PIL\Image.py", line 3493, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\Users\\LENOVO\\Desktop\\mtjbysj\\pymodel\\data\\PlantVillage\\Potato___Late_blight\\image (423)_comp.JPG'
+

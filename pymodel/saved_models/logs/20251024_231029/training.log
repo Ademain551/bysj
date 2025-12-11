@@ -1,0 +1,107 @@
+2025-10-24 23:10:29 - INFO - 日志初始化完成，实验名称：20251024_231029
+2025-10-24 23:10:29 - INFO - 日志目录：E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\logs\20251024_231029
+2025-10-24 23:10:29 - INFO - ============================================================
+2025-10-24 23:10:29 - INFO - 开始训练流程
+2025-10-24 23:10:29 - INFO - 设备: cuda
+2025-10-24 23:10:29 - INFO - 批次大小: 32
+2025-10-24 23:10:29 - INFO - 总轮次: 30
+2025-10-24 23:10:29 - INFO - 学习率: 0.0001
+2025-10-24 23:10:29 - INFO - 类别数: 39
+2025-10-24 23:10:29 - INFO - ============================================================
+2025-10-24 23:10:29 - INFO - 可训练参数: 特征层 21, 分类头 2
+2025-10-24 23:10:29 - INFO - 启用混合精度训练(AMP)
+2025-10-24 23:10:29 - INFO - 
+2025-10-24 23:10:29 - INFO - Epoch 1/30
+2025-10-24 23:10:29 - INFO - ------------------------------------------------------------
+2025-10-24 23:18:44 - INFO - Epoch 1/30 - Train Loss: 1.0954, Train Acc: 0.9088 | Val Loss: 0.8563, Val Acc: 0.9760 | LR: 0.000050
+2025-10-24 23:18:44 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-24 23:18:44 - INFO - 💾 保存最佳模型 - Epoch 1, 验证准确率: 0.9760
+2025-10-24 23:18:44 - INFO - 
+2025-10-24 23:18:44 - INFO - Epoch 2/30
+2025-10-24 23:18:44 - INFO - ------------------------------------------------------------
+2025-10-24 23:19:24 - ERROR - 训练epoch时发生错误: Caught RuntimeError in DataLoader worker process 2.
+Original Traceback (most recent call last):
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 211, in collate
+    return [
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 212, in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 155, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 270, in collate_tensor_fn
+    storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\storage.py", line 1180, in _new_shared
+    untyped_storage = torch.UntypedStorage._new_shared(
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\storage.py", line 400, in _new_shared
+    return cls._new_using_filename_cpu(size)
+RuntimeError: Couldn't open shared file mapping: <torch_44092_1298096506_0>, error code: <1455>
+
+2025-10-24 23:19:24 - ERROR - ❌ 训练过程中发生异常: RuntimeError
+2025-10-24 23:19:24 - ERROR - 异常详情: Caught RuntimeError in DataLoader worker process 2.
+Original Traceback (most recent call last):
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 211, in collate
+    return [
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 212, in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 155, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 270, in collate_tensor_fn
+    storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\storage.py", line 1180, in _new_shared
+    untyped_storage = torch.UntypedStorage._new_shared(
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\storage.py", line 400, in _new_shared
+    return cls._new_using_filename_cpu(size)
+RuntimeError: Couldn't open shared file mapping: <torch_44092_1298096506_0>, error code: <1455>
+
+2025-10-24 23:19:24 - ERROR - 堆栈追踪:
+Traceback (most recent call last):
+  File "E:\Users\LENOVO\Desktop\mtjbysj\pymodel\utils\train_utils.py", line 333, in train_model
+    train_loss, train_acc = train_one_epoch(
+  File "E:\Users\LENOVO\Desktop\mtjbysj\pymodel\utils\train_utils.py", line 92, in train_one_epoch
+    raise e
+  File "E:\Users\LENOVO\Desktop\mtjbysj\pymodel\utils\train_utils.py", line 46, in train_one_epoch
+    for batch_idx, (images, labels) in enumerate(pbar):
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\tqdm\std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\dataloader.py", line 1465, in _next_data
+    return self._process_data(data)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\dataloader.py", line 1491, in _process_data
+    data.reraise()
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\_utils.py", line 715, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in DataLoader worker process 2.
+Original Traceback (most recent call last):
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 211, in collate
+    return [
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 212, in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 155, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\utils\data\_utils\collate.py", line 270, in collate_tensor_fn
+    storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\storage.py", line 1180, in _new_shared
+    untyped_storage = torch.UntypedStorage._new_shared(
+  File "C:\Users\LENOVO\anaconda3\envs\bysj601\lib\site-packages\torch\storage.py", line 400, in _new_shared
+    return cls._new_using_filename_cpu(size)
+RuntimeError: Couldn't open shared file mapping: <torch_44092_1298096506_0>, error code: <1455>
+
+

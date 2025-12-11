@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>农业病害监测系统 - 智能农业解决方案</title>
+    <!-- 引入现代化CSS文件 -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+        /* 页面特定样式 */
+        :root {
+            --primary-color: #2e8b57;
+            --primary-light: #e8f5e8;
+            --primary-dark: #1b5e20;
+            --accent-color: #66bb6a;
+            --accent-dark: #388e3c;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="%23ffffff" fill-opacity="0.05" fill-rule="evenodd"/%3E%3C/svg%3E');
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+        
+        .features-section {
+            padding: 80px 0;
+            background-color: var(--background-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+        }
+        
+        .feature-icon svg {
+            width: 36px;
+            height: 36px;
+            color: var(--primary-color);
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .news-section {
+            padding: 80px 0;
+            background-color: var(--surface-color);
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(46, 139, 87, 0.15);
+            border-color: var(--primary-color);
+        }
+        
+        .news-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            padding: 10px 0;
+            transition: color 0.3s ease;
+        }
+        
+        .news-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            background-color: var(--background-color);
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 40px;
+            color: #e74c3c;
+            background-color: #fadbd8;
+            border-radius: 8px;
+            border: 1px solid #f39c12;
+            margin: 20px 0;
+        }
+        
+        .empty {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            background-color: var(--background-color);
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .stats-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-description {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .features-section,
+            .news-section,
+            .cta-section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.75rem;
+            }
+            
+            .stats-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/" class="brand-link">
+                    <span class="brand-text">农业病害监测系统</span>
+                </a>
+            </div>
+            
+            <!-- 桌面导航 -->
+            <div class="navbar-desktop">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="navbar-link">
+                            <img src="css/icons/home.svg" alt="首页" class="nav-icon">
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#features" class="navbar-link">
+                            <span>功能特性</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#news" class="navbar-link">
+                            <img src="css/icons/news.svg" alt="新闻" class="nav-icon">
+                            <span>新闻资讯</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="navbar-link">
+                            <span>关于我们</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-actions">
+                    <button class="btn btn-icon">
+                        <img src="css/icons/search.svg" alt="搜索" class="icon">
+                    </button>
+                    <button class="btn btn-icon">
+                        <img src="css/icons/user.svg" alt="用户" class="icon">
+                    </button>
+                    <button class="btn btn-primary btn-sm">立即使用</button>
+                </div>
+            </div>
+            
+            <!-- 移动端菜单按钮 -->
+            <button class="navbar-toggle" aria-label="打开菜单">
+                <img src="css/icons/menu.svg" alt="菜单" class="icon">
+            </button>
+        </div>
+    </nav>
+    
+    <!-- 移动导航菜单 -->
+    <div class="navbar-mobile">
+        <div class="navbar-mobile-header">
+            <div class="navbar-brand">
+                <a href="/" class="brand-link">
+                    <span class="brand-text">农业病害监测系统</span>
+                </a>
+            </div>
+            <button class="navbar-mobile-close" aria-label="关闭菜单">
+                <img src="css/icons/close.svg" alt="关闭" class="icon">
+            </button>
+        </div>
+        <ul class="navbar-mobile-nav">
+            <li class="nav-item">
+                <a href="#" class="navbar-mobile-link">
+                    <img src="css/icons/home.svg" alt="首页" class="nav-icon">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#features" class="navbar-mobile-link">
+                    <span>功能特性</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#news" class="navbar-mobile-link">
+                    <img src="css/icons/news.svg" alt="新闻" class="nav-icon">
+                    <span>新闻资讯</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="navbar-mobile-link">
+                    <span>关于我们</span>
+                </a>
+            </li>
+        </ul>
+        <div class="navbar-mobile-actions">
+            <button class="btn btn-primary w-full mb-3">立即使用</button>
+            <button class="btn btn-outline w-full">登录</button>
+        </div>
+    </div>
+    
+    <!-- 导航遮罩层 -->
+    <div class="navbar-overlay"></div>
+    
+    <!-- 英雄区域 -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">智能农业病害监测系统</h1>
+                <p class="hero-subtitle">利用人工智能技术，精准识别农作物病害，提供科学防控方案，助力农业增产增收，保障粮食安全。</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg">立即体验</button>
+                    <button class="btn btn-outline btn-lg btn-white ml-4">了解技术</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 功能特性区域 -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">核心功能</h2>
+                <p class="section-description">我们提供全方位的农作物病害监测与诊断解决方案</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">智能识别</h3>
+                    <p class="feature-description">基于深度学习的病害图像识别技术，准确率高达95%以上，识别速度快，支持多种作物和病害类型。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">实时监测</h3>
+                    <p class="feature-description">持续监控作物生长状况，通过传感器网络和图像采集设备，及时发现异常情况，提前预警潜在病害风险。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">专业指导</h3>
+                    <p class="feature-description">提供针对性的病害防治建议和管理方案，结合专家知识库和当地气候条件，确保防控措施科学有效。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">数据管理</h3>
+                    <p class="feature-description">完整记录作物生长过程和病害发生情况，生成数据分析报告，帮助农户优化种植管理策略，提高生产效率。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">精准预警</h3>
+                    <p class="feature-description">基于历史数据和实时监测，利用人工智能算法预测病害发生趋势，提前发布预警信息，防患于未然。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">专家支持</h3>
+                    <p class="feature-description">提供在线专家咨询服务，农户可随时获取专业指导，解决复杂病害问题，确保农业生产顺利进行。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 统计数据区域 -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">95%+</div>
+                    <div class="stat-label">识别准确率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">支持作物种类</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">识别病害类型</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">80%+</div>
+                    <div class="stat-label">用户满意度</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 新闻资讯区域 -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">农业农村新闻</h2>
+                <p class="section-description">了解最新的农业政策、技术动态和市场信息</p>
+            </div>
+            
+            <div class="news-container" id="newsContainer">
+                <div class="loading">加载新闻中...</div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button class="btn btn-outline btn-primary">查看更多新闻</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 行动号召区域 -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">立即使用智能监测系统</h2>
+            <p class="cta-description">让科技助力农业生产，提高作物产量和品质，实现智慧农业新发展</p>
+            <button class="btn btn-white btn-lg">免费体验</button>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand-text">农业病害监测系统</div>
+                    <p class="brand-description">利用人工智能技术，精准识别农作物病害</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-links-title">快速链接</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">首页</a></li>
+                        <li><a href="#features" class="footer-link">功能特性</a></li>
+                        <li><a href="#news" class="footer-link">新闻资讯</a></li>
+                        <li><a href="#about" class="footer-link">关于我们</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-links-title">联系我们</h4>
+                    <ul>
+                        <li class="footer-link">客服电话：400-123-4567</li>
+                        <li class="footer-link">邮箱：support@nongye.net</li>
+                        <li class="footer-link">地址：北京市海淀区科技园区</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2024 农业病害监测系统. 保留所有权利.
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="社交媒体链接 Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="社交媒体链接 Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="社交媒体链接 Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 引入JavaScript文件 -->
+    <script src="js/navigation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsContainer = document.getElementById('newsContainer');
+            
+            // 获取农业农村新闻
+            fetch('/api/external-news')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('网络响应错误');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    newsContainer.innerHTML = '';
+                    
+                    if (Array.isArray(data) && data.length > 0) {
+                        // 限制显示最新的10条新闻
+                        const newsToShow = data.slice(0, 10);
+                        
+                        newsToShow.forEach(news => {
+                            const newsCard = document.createElement('div');
+                            newsCard.className = 'news-card';
+                            
+                            const newsLink = document.createElement('a');
+                            newsLink.href = news.url || '#';
+                            newsLink.target = '_blank';
+                            newsLink.rel = 'noopener noreferrer';
+                            newsLink.textContent = news.title || '未命名新闻';
+                            newsLink.className = 'news-link';
+                            
+                            newsCard.appendChild(newsLink);
+                            newsContainer.appendChild(newsCard);
+                        });
+                    } else {
+                        newsContainer.innerHTML = '<div class="empty">暂无新闻数据</div>';
+                    }
+                })
+                .catch(error => {
+                    console.error('获取新闻失败:', error);
+                    newsContainer.innerHTML = '<div class="error">获取新闻失败，请稍后重试</div>';
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<template>
+  <svg
+    class="nav-icon"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <rect
+      x="3.5"
+      y="5"
+      width="17"
+      height="14"
+      rx="2.2"
+      ry="2.2"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+    />
+    <path
+      d="M9 5.2 10.3 4h3.4L15 5.2"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+    />
+    <circle
+      cx="12"
+      cy="12"
+      r="3.2"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+    />
+  </svg>
+</template>

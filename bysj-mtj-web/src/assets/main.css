@@ -1,0 +1,56 @@
+@import './base.css';
+
+/* Full-width app shell; page paddings are handled per-view */
+#app { font-weight: normal; }
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body { display: block; }
+}
+
+/* Neon divider and section helpers */
+.section { padding: 12px; }
+.section-title { font-weight: 700; margin-bottom: 8px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+@media (max-width: 900px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* button styles moved to base.css (.btn / .btn.secondary / .btn.outline) */
+
+.card, .news.card, .quick.card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e5e6eb;
+}
+
+.carousel.card {
+  background: #f3fbfe;
+  box-shadow: 0 8px 24px 0 rgba(41,151,255,0.10);
+  border-radius: 14px;
+}
+
+.section-title {
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  color: var(--apple-blue, #2997ff);
+  margin-bottom: 9px;
+  font-size: 1.15rem;
+}

@@ -1,0 +1,199 @@
+2025-10-27 12:21:20 - INFO - 日志初始化完成，实验名称：20251027_122120
+2025-10-27 12:21:20 - INFO - 日志目录：E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\logs\20251027_122120
+2025-10-27 12:21:20 - INFO - ============================================================
+2025-10-27 12:21:20 - INFO - 开始训练流程
+2025-10-27 12:21:20 - INFO - 设备: cuda
+2025-10-27 12:21:20 - INFO - 批次大小: 64
+2025-10-27 12:21:20 - INFO - 总轮次: 30
+2025-10-27 12:21:20 - INFO - 学习率: 0.0001
+2025-10-27 12:21:20 - INFO - 类别数: 38
+2025-10-27 12:21:20 - INFO - ============================================================
+2025-10-27 12:21:20 - INFO - 可训练参数: 特征层 84, 分类头 2
+2025-10-27 12:21:20 - INFO - 启用混合精度训练(AMP)
+2025-10-27 12:21:20 - INFO - 
+2025-10-27 12:21:20 - INFO - Epoch 1/30
+2025-10-27 12:21:20 - INFO - ------------------------------------------------------------
+2025-10-27 12:29:33 - INFO - Epoch 1/30 - Train Loss: 1.5753, Train Acc: 0.7637 | Val Loss: 0.9196, Val Acc: 0.9471 | LR: 0.000050
+2025-10-27 12:29:33 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 12:29:33 - INFO - 💾 保存最佳模型 - Epoch 1, 验证准确率: 0.9471
+2025-10-27 12:29:33 - INFO - 
+2025-10-27 12:29:33 - INFO - Epoch 2/30
+2025-10-27 12:29:33 - INFO - ------------------------------------------------------------
+2025-10-27 12:37:31 - INFO - Epoch 2/30 - Train Loss: 0.9763, Train Acc: 0.9243 | Val Loss: 0.8326, Val Acc: 0.9703 | LR: 0.000050
+2025-10-27 12:37:31 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 12:37:31 - INFO - 💾 保存最佳模型 - Epoch 2, 验证准确率: 0.9703
+2025-10-27 12:37:31 - INFO - 
+2025-10-27 12:37:31 - INFO - Epoch 3/30
+2025-10-27 12:37:31 - INFO - ------------------------------------------------------------
+2025-10-27 12:45:26 - INFO - Epoch 3/30 - Train Loss: 0.9023, Train Acc: 0.9460 | Val Loss: 0.7935, Val Acc: 0.9810 | LR: 0.000050
+2025-10-27 12:45:26 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 12:45:26 - INFO - 💾 保存最佳模型 - Epoch 3, 验证准确率: 0.9810
+2025-10-27 12:45:26 - INFO - 
+2025-10-27 12:45:26 - INFO - Epoch 4/30
+2025-10-27 12:45:26 - INFO - ------------------------------------------------------------
+2025-10-27 12:53:19 - INFO - Epoch 4/30 - Train Loss: 0.8676, Train Acc: 0.9564 | Val Loss: 0.7707, Val Acc: 0.9857 | LR: 0.000050
+2025-10-27 12:53:19 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 12:53:19 - INFO - 💾 保存最佳模型 - Epoch 4, 验证准确率: 0.9857
+2025-10-27 12:53:19 - INFO - 
+2025-10-27 12:53:19 - INFO - Epoch 5/30
+2025-10-27 12:53:19 - INFO - ------------------------------------------------------------
+2025-10-27 13:01:13 - INFO - Epoch 5/30 - Train Loss: 0.8426, Train Acc: 0.9630 | Val Loss: 0.7594, Val Acc: 0.9851 | LR: 0.000050
+2025-10-27 13:01:14 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 13:01:14 - INFO - 验证准确率无提升：连续 1/7 次
+2025-10-27 13:01:14 - INFO - 
+2025-10-27 13:01:14 - INFO - Epoch 6/30
+2025-10-27 13:01:14 - INFO - ------------------------------------------------------------
+2025-10-27 13:09:03 - INFO - Epoch 6/30 - Train Loss: 0.8257, Train Acc: 0.9669 | Val Loss: 0.7465, Val Acc: 0.9887 | LR: 0.000050
+2025-10-27 13:09:03 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 13:09:03 - INFO - 💾 保存最佳模型 - Epoch 6, 验证准确率: 0.9887
+2025-10-27 13:09:03 - INFO - 
+2025-10-27 13:09:03 - INFO - Epoch 7/30
+2025-10-27 13:09:03 - INFO - ------------------------------------------------------------
+2025-10-27 13:16:52 - INFO - Epoch 7/30 - Train Loss: 0.8119, Train Acc: 0.9702 | Val Loss: 0.7441, Val Acc: 0.9896 | LR: 0.000050
+2025-10-27 13:16:52 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 13:16:52 - INFO - 💾 保存最佳模型 - Epoch 7, 验证准确率: 0.9896
+2025-10-27 13:16:52 - INFO - 
+2025-10-27 13:16:52 - INFO - Epoch 8/30
+2025-10-27 13:16:52 - INFO - ------------------------------------------------------------
+2025-10-27 13:24:42 - INFO - Epoch 8/30 - Train Loss: 0.8019, Train Acc: 0.9723 | Val Loss: 0.7360, Val Acc: 0.9895 | LR: 0.000050
+2025-10-27 13:24:42 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 13:24:42 - INFO - 验证准确率无提升：连续 1/7 次
+2025-10-27 13:24:42 - INFO - 
+2025-10-27 13:24:42 - INFO - Epoch 9/30
+2025-10-27 13:24:42 - INFO - ------------------------------------------------------------
+2025-10-27 13:32:34 - INFO - Epoch 9/30 - Train Loss: 0.7949, Train Acc: 0.9745 | Val Loss: 0.7320, Val Acc: 0.9906 | LR: 0.000050
+2025-10-27 13:32:34 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 13:32:34 - INFO - 💾 保存最佳模型 - Epoch 9, 验证准确率: 0.9906
+2025-10-27 13:32:34 - INFO - 
+2025-10-27 13:32:34 - INFO - Epoch 10/30
+2025-10-27 13:32:34 - INFO - ------------------------------------------------------------
+2025-10-27 13:40:25 - INFO - Epoch 10/30 - Train Loss: 0.7886, Train Acc: 0.9763 | Val Loss: 0.7299, Val Acc: 0.9915 | LR: 0.000050
+2025-10-27 13:40:25 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 13:40:26 - INFO - 💾 保存最佳模型 - Epoch 10, 验证准确率: 0.9915
+2025-10-27 13:40:26 - INFO - 
+2025-10-27 13:40:26 - INFO - Epoch 11/30
+2025-10-27 13:40:26 - INFO - ------------------------------------------------------------
+2025-10-27 13:48:16 - INFO - Epoch 11/30 - Train Loss: 0.7822, Train Acc: 0.9773 | Val Loss: 0.7247, Val Acc: 0.9915 | LR: 0.000050
+2025-10-27 13:48:16 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 13:48:16 - INFO - 💾 保存最佳模型 - Epoch 11, 验证准确率: 0.9915
+2025-10-27 13:48:16 - INFO - 
+2025-10-27 13:48:16 - INFO - Epoch 12/30
+2025-10-27 13:48:16 - INFO - ------------------------------------------------------------
+2025-10-27 13:56:11 - INFO - Epoch 12/30 - Train Loss: 0.7742, Train Acc: 0.9788 | Val Loss: 0.7252, Val Acc: 0.9903 | LR: 0.000050
+2025-10-27 13:56:11 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 13:56:11 - INFO - 验证准确率无提升：连续 1/7 次
+2025-10-27 13:56:11 - INFO - 
+2025-10-27 13:56:11 - INFO - Epoch 13/30
+2025-10-27 13:56:11 - INFO - ------------------------------------------------------------
+2025-10-27 14:04:00 - INFO - Epoch 13/30 - Train Loss: 0.7709, Train Acc: 0.9796 | Val Loss: 0.7186, Val Acc: 0.9925 | LR: 0.000050
+2025-10-27 14:04:00 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 14:04:00 - INFO - 💾 保存最佳模型 - Epoch 13, 验证准确率: 0.9925
+2025-10-27 14:04:00 - INFO - 
+2025-10-27 14:04:00 - INFO - Epoch 14/30
+2025-10-27 14:04:00 - INFO - ------------------------------------------------------------
+2025-10-27 14:11:47 - INFO - Epoch 14/30 - Train Loss: 0.7670, Train Acc: 0.9805 | Val Loss: 0.7164, Val Acc: 0.9934 | LR: 0.000050
+2025-10-27 14:11:47 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 14:11:47 - INFO - 💾 保存最佳模型 - Epoch 14, 验证准确率: 0.9934
+2025-10-27 14:11:47 - INFO - 
+2025-10-27 14:11:47 - INFO - Epoch 15/30
+2025-10-27 14:11:47 - INFO - ------------------------------------------------------------
+2025-10-27 14:19:34 - INFO - Epoch 15/30 - Train Loss: 0.7601, Train Acc: 0.9830 | Val Loss: 0.7151, Val Acc: 0.9928 | LR: 0.000050
+2025-10-27 14:19:34 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 14:19:34 - INFO - 验证准确率无提升：连续 1/7 次
+2025-10-27 14:19:34 - INFO - 
+2025-10-27 14:19:34 - INFO - Epoch 16/30
+2025-10-27 14:19:34 - INFO - ------------------------------------------------------------
+2025-10-27 14:27:22 - INFO - Epoch 16/30 - Train Loss: 0.7585, Train Acc: 0.9835 | Val Loss: 0.7114, Val Acc: 0.9935 | LR: 0.000050
+2025-10-27 14:27:22 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 14:27:22 - INFO - 💾 保存最佳模型 - Epoch 16, 验证准确率: 0.9935
+2025-10-27 14:27:22 - INFO - 
+2025-10-27 14:27:22 - INFO - Epoch 17/30
+2025-10-27 14:27:22 - INFO - ------------------------------------------------------------
+2025-10-27 14:35:10 - INFO - Epoch 17/30 - Train Loss: 0.7569, Train Acc: 0.9823 | Val Loss: 0.7108, Val Acc: 0.9937 | LR: 0.000050
+2025-10-27 14:35:10 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 14:35:10 - INFO - 💾 保存最佳模型 - Epoch 17, 验证准确率: 0.9937
+2025-10-27 14:35:10 - INFO - 
+2025-10-27 14:35:10 - INFO - Epoch 18/30
+2025-10-27 14:35:10 - INFO - ------------------------------------------------------------
+2025-10-27 14:42:59 - INFO - Epoch 18/30 - Train Loss: 0.7530, Train Acc: 0.9838 | Val Loss: 0.7096, Val Acc: 0.9930 | LR: 0.000050
+2025-10-27 14:42:59 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 14:42:59 - INFO - 验证准确率无提升：连续 1/7 次
+2025-10-27 14:42:59 - INFO - 
+2025-10-27 14:42:59 - INFO - Epoch 19/30
+2025-10-27 14:42:59 - INFO - ------------------------------------------------------------
+2025-10-27 14:50:47 - INFO - Epoch 19/30 - Train Loss: 0.7488, Train Acc: 0.9852 | Val Loss: 0.7089, Val Acc: 0.9944 | LR: 0.000050
+2025-10-27 14:50:47 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 14:50:47 - INFO - 💾 保存最佳模型 - Epoch 19, 验证准确率: 0.9944
+2025-10-27 14:50:47 - INFO - 
+2025-10-27 14:50:47 - INFO - Epoch 20/30
+2025-10-27 14:50:47 - INFO - ------------------------------------------------------------
+2025-10-27 14:58:36 - INFO - Epoch 20/30 - Train Loss: 0.7470, Train Acc: 0.9853 | Val Loss: 0.7080, Val Acc: 0.9940 | LR: 0.000050
+2025-10-27 14:58:36 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 14:58:36 - INFO - 验证准确率无提升：连续 1/7 次
+2025-10-27 14:58:36 - INFO - 
+2025-10-27 14:58:36 - INFO - Epoch 21/30
+2025-10-27 14:58:36 - INFO - ------------------------------------------------------------
+2025-10-27 15:06:24 - INFO - Epoch 21/30 - Train Loss: 0.7446, Train Acc: 0.9863 | Val Loss: 0.7075, Val Acc: 0.9938 | LR: 0.000050
+2025-10-27 15:06:24 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 15:06:24 - INFO - 验证准确率无提升：连续 2/7 次
+2025-10-27 15:06:24 - INFO - 
+2025-10-27 15:06:24 - INFO - Epoch 22/30
+2025-10-27 15:06:24 - INFO - ------------------------------------------------------------
+2025-10-27 15:14:11 - INFO - Epoch 22/30 - Train Loss: 0.7429, Train Acc: 0.9864 | Val Loss: 0.7037, Val Acc: 0.9951 | LR: 0.000050
+2025-10-27 15:14:11 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 15:14:11 - INFO - 💾 保存最佳模型 - Epoch 22, 验证准确率: 0.9951
+2025-10-27 15:14:11 - INFO - 
+2025-10-27 15:14:11 - INFO - Epoch 23/30
+2025-10-27 15:14:11 - INFO - ------------------------------------------------------------
+2025-10-27 15:21:59 - INFO - Epoch 23/30 - Train Loss: 0.7398, Train Acc: 0.9872 | Val Loss: 0.7049, Val Acc: 0.9948 | LR: 0.000050
+2025-10-27 15:21:59 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 15:21:59 - INFO - 验证准确率无提升：连续 1/7 次
+2025-10-27 15:21:59 - INFO - 
+2025-10-27 15:21:59 - INFO - Epoch 24/30
+2025-10-27 15:21:59 - INFO - ------------------------------------------------------------
+2025-10-27 15:29:47 - INFO - Epoch 24/30 - Train Loss: 0.7380, Train Acc: 0.9872 | Val Loss: 0.7041, Val Acc: 0.9940 | LR: 0.000050
+2025-10-27 15:29:47 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 15:29:47 - INFO - 验证准确率无提升：连续 2/7 次
+2025-10-27 15:29:47 - INFO - 
+2025-10-27 15:29:47 - INFO - Epoch 25/30
+2025-10-27 15:29:47 - INFO - ------------------------------------------------------------
+2025-10-27 15:37:36 - INFO - Epoch 25/30 - Train Loss: 0.7373, Train Acc: 0.9872 | Val Loss: 0.7037, Val Acc: 0.9943 | LR: 0.000050
+2025-10-27 15:37:36 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 15:37:36 - INFO - 验证准确率无提升：连续 3/7 次
+2025-10-27 15:37:36 - INFO - 
+2025-10-27 15:37:36 - INFO - Epoch 26/30
+2025-10-27 15:37:36 - INFO - ------------------------------------------------------------
+2025-10-27 15:45:25 - INFO - Epoch 26/30 - Train Loss: 0.7354, Train Acc: 0.9876 | Val Loss: 0.7006, Val Acc: 0.9949 | LR: 0.000050
+2025-10-27 15:45:25 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 15:45:25 - INFO - 验证准确率无提升：连续 4/7 次
+2025-10-27 15:45:25 - INFO - 
+2025-10-27 15:45:25 - INFO - Epoch 27/30
+2025-10-27 15:45:25 - INFO - ------------------------------------------------------------
+2025-10-27 15:53:15 - INFO - Epoch 27/30 - Train Loss: 0.7325, Train Acc: 0.9884 | Val Loss: 0.6988, Val Acc: 0.9963 | LR: 0.000050
+2025-10-27 15:53:15 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 15:53:16 - INFO - 💾 保存最佳模型 - Epoch 27, 验证准确率: 0.9963
+2025-10-27 15:53:16 - INFO - 
+2025-10-27 15:53:16 - INFO - Epoch 28/30
+2025-10-27 15:53:16 - INFO - ------------------------------------------------------------
+2025-10-27 16:01:09 - INFO - Epoch 28/30 - Train Loss: 0.7327, Train Acc: 0.9882 | Val Loss: 0.6996, Val Acc: 0.9959 | LR: 0.000050
+2025-10-27 16:01:10 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 16:01:10 - INFO - 验证准确率无提升：连续 1/7 次
+2025-10-27 16:01:10 - INFO - 
+2025-10-27 16:01:10 - INFO - Epoch 29/30
+2025-10-27 16:01:10 - INFO - ------------------------------------------------------------
+2025-10-27 16:08:57 - INFO - Epoch 29/30 - Train Loss: 0.7302, Train Acc: 0.9886 | Val Loss: 0.6976, Val Acc: 0.9959 | LR: 0.000050
+2025-10-27 16:08:57 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 16:08:57 - INFO - 验证准确率无提升：连续 2/7 次
+2025-10-27 16:08:57 - INFO - 
+2025-10-27 16:08:57 - INFO - Epoch 30/30
+2025-10-27 16:08:57 - INFO - ------------------------------------------------------------
+2025-10-27 16:16:46 - INFO - Epoch 30/30 - Train Loss: 0.7292, Train Acc: 0.9887 | Val Loss: 0.6986, Val Acc: 0.9954 | LR: 0.000050
+2025-10-27 16:16:46 - INFO - Checkpoint已保存: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\last_checkpoint.pth
+2025-10-27 16:16:46 - INFO - 验证准确率无提升：连续 3/7 次
+2025-10-27 16:16:46 - INFO - ============================================================
+2025-10-27 16:16:46 - INFO - ✅ 训练完成！
+2025-10-27 16:16:46 - INFO - 总训练轮次: 30
+2025-10-27 16:16:46 - INFO - 最佳验证准确率: 0.9963
+2025-10-27 16:16:46 - INFO - 模型保存路径: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\best_model.pth
+2025-10-27 16:16:46 - INFO - 日志保存路径: E:\Users\LENOVO\Desktop\mtjbysj\pymodel\saved_models\logs\20251027_122120
+2025-10-27 16:16:46 - INFO - ============================================================
