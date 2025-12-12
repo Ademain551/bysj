@@ -11,7 +11,7 @@
  Target Server Version : 80043
  File Encoding         : 65001
 
- Date: 21/11/2025 14:21:49
+ Date: 12/12/2025 14:43:00
 */
 
 SET NAMES utf8mb4;
@@ -29,12 +29,12 @@ CREATE TABLE `announcements`  (
   `created_at` datetime(6) NOT NULL,
   `updated_at` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of announcements
 -- ----------------------------
-INSERT INTO `announcements` VALUES (1, '欢迎使用智慧农情平台', '系统已完成部署，请管理员及时完善病害知识库。', 1, '2024-10-01 09:30:00.000000', '2024-10-01 09:30:00.000000');
+INSERT INTO `announcements` VALUES (3, '系统更新公告', '系统更新至1.1.1', 1, '2025-11-23 17:54:55.200949', '2025-11-23 17:54:55.200949');
 
 -- ----------------------------
 -- Table structure for bhxx
@@ -52,7 +52,7 @@ CREATE TABLE `bhxx`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_植物名称`(`植物名称`) USING BTREE,
   INDEX `idx_病害名称`(`病害名称`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 294 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '植物病害分布情况表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 293 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '植物病害分布情况表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of bhxx
@@ -60,35 +60,35 @@ CREATE TABLE `bhxx`  (
 INSERT INTO `bhxx` VALUES (255, '苹果', '苹果黑星病', '主要发生在云南省苹果种植较集中的冷凉高海拔地区，如昭通市、丽江市、迪庆州等地。', '3-6月（苹果展叶至幼果期，多雨潮湿时发病重）', '病害发生前（防）：选用抗病品种，增施有机肥改善通风透光；清除落叶和病残体集中处理；萌芽前和生长期根据病情喷施保护性或内吸性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对苹果黑星病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.148960', '2025-11-20 12:48:21.148960');
 INSERT INTO `bhxx` VALUES (256, '苹果', '苹果黑腐病', '云南省苹果园分布区，尤以昭通市、丽江市等老果园较多地区发病偏重。', '5-9月（雨水较多、气温偏高阶段病斑和果腐发生明显）', '病害发生前（防）：修剪并烧毁病枝、病果和枯枝；雨季前后喷施对黑腐病有效的杀菌剂；注意园内排水和通风。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对苹果黑腐病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.149303', '2025-11-20 12:48:21.149303');
 INSERT INTO `bhxx` VALUES (257, '苹果', '苹果赤锈病', '在云南省苹果与针叶树混栽或相邻分布的果园区域，如昭通市、丽江市部分山区果园。', '3-5月（苹果展叶至幼果期，遇连续降雨时易发病）', '病害发生前（防）：避免在苹果园附近种植病源针叶树或清除病瘤；萌芽至展叶期喷施保护性杀菌剂；加强修剪和清园。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对苹果赤锈病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.149626', '2025-11-20 12:48:21.149626');
-INSERT INTO `bhxx` VALUES (258, '苹果', '无', '无', '无', '无', '2025-11-20 12:48:21.149828', '2025-11-20 12:48:21.149828');
-INSERT INTO `bhxx` VALUES (259, '无植物', '背景无叶片', '无', '无', '无', '2025-11-20 12:48:21.150019', '2025-11-20 12:48:21.150019');
-INSERT INTO `bhxx` VALUES (260, '蓝莓', '无', '无', '无', '无', '2025-11-20 12:48:21.150197', '2025-11-20 12:48:21.150197');
-INSERT INTO `bhxx` VALUES (261, '樱桃', '无', '无', '无', '无', '2025-11-20 12:48:21.150378', '2025-11-20 12:48:21.150378');
+INSERT INTO `bhxx` VALUES (258, '苹果', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.149828', '2025-11-21 21:10:45.335251');
+INSERT INTO `bhxx` VALUES (259, '无植物', '背景无叶片', '无', '无', '请拍摄含有植物叶片的照片以进行识别', '2025-11-20 12:48:21.150019', '2025-11-21 17:23:04.779990');
+INSERT INTO `bhxx` VALUES (260, '蓝莓', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.150197', '2025-11-21 21:10:45.335251');
+INSERT INTO `bhxx` VALUES (261, '樱桃', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.150378', '2025-11-21 21:10:45.335251');
 INSERT INTO `bhxx` VALUES (262, '樱桃', '樱桃白粉病', '云南省樱桃栽培区，如昆明市周边、曲靖市、昭通市等地的樱桃园。', '3-6月（樱桃展叶至结果期，晴暖干燥、昼夜温差大时易流行）', '病害发生前（防）：合理修剪、改善通风透光；发病初期及时喷施对白粉病有效的杀菌剂；注意清除病叶病梢。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对樱桃白粉病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.150579', '2025-11-20 12:48:21.150579');
 INSERT INTO `bhxx` VALUES (263, '玉米', '玉米灰斑病', '云南省玉米主产区的中低海拔地区，如曲靖市、昆明市、红河州、文山州等地的玉米田。', '6-9月（玉米拔节以后至灌浆期，高温高湿或降雨多时易暴发）', '病害发生前（防）：选择抗病品种，合理密植和轮作，减少玉米残株留在田间；在病害流行前或发病初期喷施系统性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对玉米灰斑病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.150781', '2025-11-20 12:48:21.150781');
 INSERT INTO `bhxx` VALUES (264, '玉米', '玉米普通锈病', '在云南省各玉米产区普遍发生，以气候偏凉爽、湿度大的高原玉米区较为多见，如昭通市、曲靖市等地。', '6-9月（玉米拔节至抽雄期为主要发病阶段）', '病害发生前（防）：选用抗锈病品种；适当早播避开发病高峰；发病初期及时喷施对锈病有效的杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对玉米普通锈病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.150979', '2025-11-20 12:48:21.150979');
-INSERT INTO `bhxx` VALUES (265, '玉米', '无', '无', '无', '无', '2025-11-20 12:48:21.151157', '2025-11-20 12:48:21.151157');
+INSERT INTO `bhxx` VALUES (265, '玉米', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.151157', '2025-11-21 21:10:45.335251');
 INSERT INTO `bhxx` VALUES (266, '玉米', '玉米大斑病', '云南省中高海拔玉米种植区，如昭通市、曲靖市、昆明市部分山区等地。', '7-9月（玉米大喇叭口期至灌浆期，阴雨连绵时病斑扩展快）', '病害发生前（防）：推广抗病品种，实行与豆类或其他作物轮作，清除病残体；在发病初期喷施针对大斑病的杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对玉米大斑病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.151340', '2025-11-20 12:48:21.151340');
 INSERT INTO `bhxx` VALUES (267, '葡萄', '葡萄黑腐病', '云南省葡萄主产区，如昆明市、玉溪市、红河州、大理州等地的葡萄园。', '4-7月（展叶后至坐果、果实膨大期，连续降雨时易流行）', '病害发生前（防）：清除并深埋病果和病枝；合理修剪和整形，保持通风透光；生长期根据病情喷施保护性或内吸性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对葡萄黑腐病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.151526', '2025-11-20 12:48:21.151526');
 INSERT INTO `bhxx` VALUES (268, '葡萄', '葡萄虎眼病（Esca病）', '云南省气候较温暖、葡萄栽培历史较长的老龄葡萄园，如红河州、玉溪市、大理州部分地区。', '6-9月（夏季高温期叶片症状明显，植株衰退加重）', '病害发生前（防）：避免大伤口修剪并及时保护剪口；清除病株和严重病枝并销毁；加强栽培管理，降低植株衰弱程度。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对葡萄虎眼病（Esca病） 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.151720', '2025-11-20 12:48:21.151720');
-INSERT INTO `bhxx` VALUES (269, '葡萄', '无', '无', '无', '无', '2025-11-20 12:48:21.151900', '2025-11-20 12:48:21.151900');
+INSERT INTO `bhxx` VALUES (269, '葡萄', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.151900', '2025-11-21 21:10:45.335251');
 INSERT INTO `bhxx` VALUES (270, '葡萄', '葡萄叶枯病（伊萨氏叶斑病）', '云南省葡萄栽培偏湿润地区，如红河州、玉溪市、大理州部分山地果园。', '6-9月（雨水多、叶片郁闭、湿度大的时期易发病）', '病害发生前（防）：合理密植与修剪，改善冠层通风；清除病叶；生长期适时喷施广谱性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对葡萄叶枯病（伊萨氏叶斑病） 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.152082', '2025-11-20 12:48:21.152082');
 INSERT INTO `bhxx` VALUES (271, '柑橘', '柑橘黄龙病', '主要分布在云南省南部和东南部柑橘主产区，如红河州、文山州、玉溪市、普洱市、西双版纳州等地。', '全年均可见症状，以3-12月新梢生长及结果期为明显。', '病害发生前（防）：严格检疫，使用无病苗木；综合防治传播媒介木虱，控制虫口密度；发现疑似病株及时挖除并无害化处理。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对柑橘黄龙病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.152266', '2025-11-20 12:48:21.152266');
 INSERT INTO `bhxx` VALUES (272, '桃', '桃细菌性斑点病（穿孔病）', '云南省桃树种植区，如昆明市、玉溪市、曲靖市、大理州等地的桃园和苗圃。', '3-6月（桃树发芽展叶至幼果期，多雨高湿年份病斑多）', '病害发生前（防）：选择较抗病品种；采前后喷施含铜制剂或其他细菌性药剂；注意修剪和清园，减少带菌病残体。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对桃细菌性斑点病（穿孔病） 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.152461', '2025-11-20 12:48:21.152461');
-INSERT INTO `bhxx` VALUES (273, '桃', '无', '无', '无', '无', '2025-11-20 12:48:21.152686', '2025-11-20 12:48:21.152686');
+INSERT INTO `bhxx` VALUES (273, '桃', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.152686', '2025-11-21 21:10:45.335251');
 INSERT INTO `bhxx` VALUES (274, '甜椒', '甜椒细菌性斑点病', '云南省设施和露地甜椒、辣椒产区，如昆明市、曲靖市、玉溪市、红河州、文山州等地。', '4-9月（辣椒生长期，多雨或喷灌频繁时叶片和果实易感病）', '病害发生前（防）：选用健壮无病种苗；避免带菌种子并进行种子消毒；改善通风排水，控制氮肥用量；发病初期喷施含铜制剂等细菌性药剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对甜椒细菌性斑点病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.152869', '2025-11-20 12:48:21.152869');
-INSERT INTO `bhxx` VALUES (275, '甜椒', '无', '无', '无', '无', '2025-11-20 12:48:21.153044', '2025-11-20 12:48:21.153044');
+INSERT INTO `bhxx` VALUES (275, '甜椒', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.153044', '2025-11-21 21:10:45.335251');
 INSERT INTO `bhxx` VALUES (276, '马铃薯', '马铃薯早疫病', '云南省冷凉山区马铃薯主产区，如昭通市、曲靖市、昆明市、大理州、丽江市等地。', '4-7月（马铃薯现蕾到中后期，植株逐渐衰老时发病增多）', '病害发生前（防）：合理施肥，防止偏施氮肥和缺钾；清除病残体；在发病初期喷施保护性或内吸性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对马铃薯早疫病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.153226', '2025-11-20 12:48:21.153226');
-INSERT INTO `bhxx` VALUES (277, '马铃薯', '无', '无', '无', '无', '2025-11-20 12:48:21.153406', '2025-11-20 12:48:21.153406');
+INSERT INTO `bhxx` VALUES (277, '马铃薯', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.153406', '2025-11-21 21:10:45.335251');
 INSERT INTO `bhxx` VALUES (278, '马铃薯', '马铃薯晚疫病', '云南省高海拔、多雾多雨的马铃薯种植区，如昭通市、曲靖市、大理州、丽江市等地。', '6-8月（持续低温高湿或降雨频繁时易暴发流行）', '病害发生前（防）：选用抗病品种，实行高垄栽培和合理密植；雨季前和发病初期及时喷施针对晚疫病的杀菌剂；收获后处理残株和病薯。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对马铃薯晚疫病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.153588', '2025-11-20 12:48:21.153588');
-INSERT INTO `bhxx` VALUES (279, '树莓', '无', '无', '无', '无', '2025-11-20 12:48:21.153763', '2025-11-20 12:48:21.153763');
-INSERT INTO `bhxx` VALUES (280, '大豆', '无', '无', '无', '无', '2025-11-20 12:48:21.153933', '2025-11-20 12:48:21.153933');
+INSERT INTO `bhxx` VALUES (279, '树莓', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.153763', '2025-11-21 21:10:45.335251');
+INSERT INTO `bhxx` VALUES (280, '大豆', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.153933', '2025-11-21 21:10:45.335251');
 INSERT INTO `bhxx` VALUES (281, '南瓜', '南瓜白粉病', '云南省葫芦科蔬菜集中种植区，如昆明市、玉溪市、曲靖市、红河州等地。', '5-9月（南瓜生长中后期、天气干燥少雨且昼夜温差大时发病较重）', '病害发生前（防）：合理密植和整枝打叶，加强通风；发病初期喷施对白粉病有效的药剂；加施有机肥提高植株抗性。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对南瓜白粉病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.154114', '2025-11-20 12:48:21.154114');
-INSERT INTO `bhxx` VALUES (282, '草莓', '无', '无', '无', '无', '2025-11-20 12:48:21.154331', '2025-11-20 12:48:21.154331');
+INSERT INTO `bhxx` VALUES (282, '草莓', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.154331', '2025-11-21 21:10:45.335251');
 INSERT INTO `bhxx` VALUES (283, '草莓', '草莓叶枯病（叶灼病）', '云南省草莓设施栽培区和冷凉高原种植区，如昆明市周边、曲靖市、大理州等地。', '2-5月及9-11月（春季和秋季气温适宜且湿度偏高时易发生）', '病害发生前（防）：选用健壮苗，合理密植，铺设地膜减少雨水飞溅；清除病叶；发病初期喷施广谱性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对草莓叶枯病（叶灼病） 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.154539', '2025-11-20 12:48:21.154539');
 INSERT INTO `bhxx` VALUES (284, '番茄', '番茄细菌性斑点病', '云南省番茄设施和露地栽培区，如昆明市、玉溪市、曲靖市、红河州、文山州等地。', '3-7月（番茄生长期，雨水多或叶面长时间潮湿时发病明显）', '病害发生前（防）：选择健康种子并进行种子消毒；避免大水漫灌，减少叶面长期积水；发病初期喷施含铜制剂等细菌性药剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄细菌性斑点病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.154761', '2025-11-20 12:48:21.154761');
 INSERT INTO `bhxx` VALUES (285, '番茄', '番茄早疫病', '在云南省番茄主产区普遍发生，如昆明市、玉溪市、曲靖市、红河州等地。', '4-7月（番茄中后期叶片老化、气温较高时病害加重）', '病害发生前（防）：实施轮作，清除病残体；合理施肥提高抗性；在发病初期及时喷施针对早疫病的杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄早疫病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.154952', '2025-11-20 12:48:21.154952');
-INSERT INTO `bhxx` VALUES (286, '番茄', '无', '无', '无', '无', '2025-11-20 12:48:21.156496', '2025-11-20 12:48:21.156496');
+INSERT INTO `bhxx` VALUES (286, '番茄', '健康叶片', '无', '无', '无', '2025-11-20 12:48:21.156496', '2025-11-21 21:10:45.335251');
 INSERT INTO `bhxx` VALUES (287, '番茄', '番茄晚疫病', '云南省凉爽多雨或高海拔番茄种植区，如昆明市部分高海拔乡镇、曲靖市、大理州等地。', '6-10月（阴雨连绵、空气湿度大的时期易暴发流行）', '病害发生前（防）：选用抗病品种，避免低洼积水地种植；加强通风排湿；在流行前和发病初期喷施晚疫病专用杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄晚疫病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.156700', '2025-11-20 12:48:21.156700');
 INSERT INTO `bhxx` VALUES (288, '番茄', '番茄叶霉病', '主要危害云南省设施番茄种植区，如昆明市郊区、玉溪市、红河州等大棚种植区域。', '3-6月及9-11月（棚内湿度长期偏高、通风不良时多见）', '病害发生前（防）：合理密植和整枝，控制棚内湿度，及时通风；发病初期喷施内吸性杀菌剂；清除病叶并带出棚外处理。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄叶霉病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.156888', '2025-11-20 12:48:21.156888');
 INSERT INTO `bhxx` VALUES (289, '番茄', '番茄尾孢叶斑病（Septoria叶斑病）', '云南省番茄栽培区中叶片郁闭、湿度较大的地块，如昆明市、玉溪市、曲靖市等地蔬菜基地。', '4-7月（番茄生长中后期、雨水较多年份易发生）', '病害发生前（防）：合理密植与轮作，注意清除病残体；在病害初期喷施广谱性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄尾孢叶斑病（Septoria叶斑病） 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.157076', '2025-11-20 12:48:21.157076');
@@ -96,6 +96,27 @@ INSERT INTO `bhxx` VALUES (290, '番茄', '二斑叶螨为害番茄', '云南省
 INSERT INTO `bhxx` VALUES (291, '番茄', '番茄靶斑病', '云南省南部及中部温暖湿润番茄种植区，如红河州、文山州、玉溪市、普洱市等地。', '5-9月（叶片郁闭、降雨频繁时病斑扩展快）', '病害发生前（防）：避免连作，清除病残体；改善通风透光条件；发病初期喷施针对靶斑病的杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄靶斑病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.157449', '2025-11-20 12:48:21.157449');
 INSERT INTO `bhxx` VALUES (292, '番茄', '番茄花叶病毒病', '云南省各番茄产区的育苗和生产地，如昆明市、玉溪市、曲靖市、红河州等地。', '2-10月（番茄育苗至结果期均可见，以温度适宜、管理粗放时较多）', '病害发生前（防）：使用无病种子和健康苗木；加强温室卫生，减少机械操作传播；拔除严重病株集中处理；合理轮作，避免连作重茬。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄花叶病毒病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.157633', '2025-11-20 12:48:21.157633');
 INSERT INTO `bhxx` VALUES (293, '番茄', '番茄黄化曲叶病毒病', '云南省中低海拔番茄主产区，特别是白粉虱危害较重的地区，如红河州、文山州、玉溪市、西双版纳州等地。', '3-7月（番茄生长前中期，温度较高且白粉虱密度大时易流行）', '病害发生前（防）：选用抗病或耐病品种；加强对白粉虱等传播媒介的综合防治；使用防虫网、银灰地膜等物理措施；尽量采用无毒苗移栽。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄黄化曲叶病毒病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '2025-11-20 12:48:21.157819', '2025-11-20 12:48:21.157819');
+
+-- ----------------------------
+-- Table structure for cart_items
+-- ----------------------------
+DROP TABLE IF EXISTS `cart_items`;
+CREATE TABLE `cart_items`  (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `quantity` int NOT NULL,
+  `item_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `FKillka61ivevh4uctsnad4tny3`(`item_id`) USING BTREE,
+  INDEX `FK709eickf3kc0dujx3ub9i7btf`(`user_id`) USING BTREE,
+  CONSTRAINT `FK709eickf3kc0dujx3ub9i7btf` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `FKillka61ivevh4uctsnad4tny3` FOREIGN KEY (`item_id`) REFERENCES `fzwp` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of cart_items
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for chat_memberships
@@ -112,7 +133,7 @@ CREATE TABLE `chat_memberships`  (
   INDEX `idx_chat_memberships_user`(`user_id`) USING BTREE,
   CONSTRAINT `fk_chat_memberships_room` FOREIGN KEY (`room_id`) REFERENCES `chat_rooms` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_chat_memberships_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 24 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of chat_memberships
@@ -130,6 +151,12 @@ INSERT INTO `chat_memberships` VALUES (15, 8, 16, '2025-11-20 17:00:58.180900');
 INSERT INTO `chat_memberships` VALUES (16, 8, 12, '2025-11-20 17:00:58.183907');
 INSERT INTO `chat_memberships` VALUES (17, 9, 15, '2025-11-20 17:15:27.560942');
 INSERT INTO `chat_memberships` VALUES (18, 9, 11, '2025-11-20 17:15:27.562946');
+INSERT INTO `chat_memberships` VALUES (19, 10, 6, '2025-11-22 17:09:33.800717');
+INSERT INTO `chat_memberships` VALUES (20, 10, 11, '2025-11-22 17:09:33.806959');
+INSERT INTO `chat_memberships` VALUES (21, 10, 12, '2025-11-22 17:09:33.811080');
+INSERT INTO `chat_memberships` VALUES (22, 10, 13, '2025-11-22 17:09:33.815804');
+INSERT INTO `chat_memberships` VALUES (23, 10, 15, '2025-11-22 17:09:33.818805');
+INSERT INTO `chat_memberships` VALUES (24, 10, 16, '2025-11-22 17:09:33.822833');
 
 -- ----------------------------
 -- Table structure for chat_messages
@@ -146,20 +173,21 @@ CREATE TABLE `chat_messages`  (
   INDEX `idx_chat_messages_sender`(`sender_id`) USING BTREE,
   CONSTRAINT `fk_chat_messages_room` FOREIGN KEY (`room_id`) REFERENCES `chat_rooms` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_chat_messages_sender` FOREIGN KEY (`sender_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 24 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of chat_messages
 -- ----------------------------
-INSERT INTO `chat_messages` VALUES (11, 4, 11, '😀', '2025-11-20 14:41:39.684850');
-INSERT INTO `chat_messages` VALUES (12, 4, 11, '🍅', '2025-11-20 14:41:46.940586');
-INSERT INTO `chat_messages` VALUES (13, 4, 11, '🌿', '2025-11-20 14:41:50.842061');
 INSERT INTO `chat_messages` VALUES (14, 4, 12, '哈哈哈', '2025-11-20 15:13:23.138651');
 INSERT INTO `chat_messages` VALUES (15, 6, 15, '[图片] /uploads/chat/9a8e0adb9e01451884b684d65e45f186.jpg', '2025-11-20 17:14:29.243769');
 INSERT INTO `chat_messages` VALUES (16, 6, 15, '[附件] 20221108900213马童杰.pdf /uploads/chat/78ba6cea36634227afb8874973c7ff3e.pdf', '2025-11-20 17:14:47.579115');
 INSERT INTO `chat_messages` VALUES (17, 6, 15, '🤣', '2025-11-20 17:15:10.370897');
 INSERT INTO `chat_messages` VALUES (18, 6, 15, '🍅', '2025-11-20 17:15:12.451217');
 INSERT INTO `chat_messages` VALUES (19, 6, 15, '🌿', '2025-11-20 17:15:14.095023');
+INSERT INTO `chat_messages` VALUES (20, 6, 15, '[附件] 82828282_20251121203206_玉米灰斑病.pdf /uploads/chat/7912bed99ef8449fa7c95497e8d8d324.pdf', '2025-11-21 20:53:58.868656');
+INSERT INTO `chat_messages` VALUES (21, 10, 6, '【系统通知】啊大苏打\n大苏打倒萨大苏打盛大的', '2025-11-22 17:09:33.827348');
+INSERT INTO `chat_messages` VALUES (22, 10, 6, '【系统通知】系统更新公告\n系统更新至1.1.1', '2025-11-23 17:54:55.246252');
+INSERT INTO `chat_messages` VALUES (23, 7, 11, '[附件] 20221108900213马童杰.pdf /uploads/chat/25a5398e753c4d47829b0e7841b7123b.pdf', '2025-12-02 12:58:30.854656');
 
 -- ----------------------------
 -- Table structure for chat_rooms
@@ -173,7 +201,7 @@ CREATE TABLE `chat_rooms`  (
   `created_at` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `uk_chat_rooms_direct_key`(`direct_key`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of chat_rooms
@@ -187,6 +215,41 @@ INSERT INTO `chat_rooms` VALUES (6, 'direct', NULL, '12345678|82828282', '2025-1
 INSERT INTO `chat_rooms` VALUES (7, 'direct', NULL, '00000000|88888888', '2025-11-20 17:00:45.741897');
 INSERT INTO `chat_rooms` VALUES (8, 'direct', NULL, '00000000|11111111', '2025-11-20 17:00:58.178839');
 INSERT INTO `chat_rooms` VALUES (9, 'direct', NULL, '82828282|88888888', '2025-11-20 17:15:27.558430');
+INSERT INTO `chat_rooms` VALUES (10, 'group', '系统通知', NULL, '2025-11-22 17:09:33.791517');
+
+-- ----------------------------
+-- Table structure for detect_error_feedbacks
+-- ----------------------------
+DROP TABLE IF EXISTS `detect_error_feedbacks`;
+CREATE TABLE `detect_error_feedbacks`  (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `added_to_dataset` bit(1) NULL DEFAULT NULL,
+  `correct_disease` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `correct_model_label` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `correct_plant` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `created_at` datetime(6) NOT NULL,
+  `expert_comment` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `farmer_comment` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `reply_message` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `retrain_required` bit(1) NULL DEFAULT NULL,
+  `retrain_triggered` bit(1) NULL DEFAULT NULL,
+  `status` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `updated_at` datetime(6) NULL DEFAULT NULL,
+  `detect_result_id` bigint NOT NULL,
+  `expert_id` bigint NOT NULL,
+  `farmer_id` bigint NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `FK612ppk0pmgo0dals4dfp9rn1d`(`detect_result_id`) USING BTREE,
+  INDEX `FKge6dr6o9eei8mr7flck70vk8r`(`expert_id`) USING BTREE,
+  INDEX `FKcg4nh1pep931m3rlm8enm7xn6`(`farmer_id`) USING BTREE,
+  CONSTRAINT `FK612ppk0pmgo0dals4dfp9rn1d` FOREIGN KEY (`detect_result_id`) REFERENCES `detect_results` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `FKcg4nh1pep931m3rlm8enm7xn6` FOREIGN KEY (`farmer_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `FKge6dr6o9eei8mr7flck70vk8r` FOREIGN KEY (`expert_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of detect_error_feedbacks
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for detect_results
@@ -203,6 +266,7 @@ CREATE TABLE `detect_results`  (
   `disease_id` bigint NULL DEFAULT NULL,
   `user_id` bigint NOT NULL,
   `username` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `report_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_detect_username_created`(`username`, `created_at`) USING BTREE,
   INDEX `idx_detect_predicted_class`(`predicted_class`) USING BTREE,
@@ -213,17 +277,26 @@ CREATE TABLE `detect_results`  (
   CONSTRAINT `FK6k2uxugdqj6y1chmy20yt9nfa` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT,
   CONSTRAINT `fk_detect_username` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `FKs3a979rv8lxfwc26cd5ldo6if` FOREIGN KEY (`disease_id`) REFERENCES `diseases` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 54 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 129 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of detect_results
 -- ----------------------------
-INSERT INTO `detect_results` VALUES (52, 'Tomato___Late_blight', 0.9562494158744812, '注意田间管理，加强虫害监测与综合防治', '/uploads/74ea557c75444b56a9d5a248ebda828c.jpg', '2025-11-20 14:20:41.305975', 'Tomato___Late_blight', NULL, 11, '88888888');
-INSERT INTO `detect_results` VALUES (53, 'Apple___Bacterial_spot', 0.38000649213790894, '注意田间管理，加强虫害监测与综合防治', '/uploads/691af55940f5461296f8b5f962a3345e.jpg', '2025-11-20 15:15:33.940757', 'Apple___Bacterial_spot', NULL, 12, '11111111');
-INSERT INTO `detect_results` VALUES (54, 'Tomato___Late_blight', 0.9562494158744812, '注意田间管理，加强虫害监测与综合防治', '/uploads/98af42a84b3a400b9e7de0172efc7aff.jpg', '2025-11-20 16:59:55.525179', 'Tomato___Late_blight', NULL, 16, '00000000');
-INSERT INTO `detect_results` VALUES (56, 'Tomato___Bacterial_spot', 0.6008535325527191, '注意田间管理，加强虫害监测与综合防治', '/uploads/47acef58b3354102992c400d9d6cac7f.jpg', '2025-11-20 17:12:45.943826', 'Tomato___Bacterial_spot', NULL, 6, 'admin601');
-INSERT INTO `detect_results` VALUES (57, 'Tomato___Late_blight', 0.9562494158744812, '注意田间管理，加强虫害监测与综合防治', '/uploads/522f61aa6b604a7cad3bb4fdfeee1a1b.jpg', '2025-11-20 21:38:58.305949', 'Tomato___Late_blight', NULL, 15, '82828282');
-INSERT INTO `detect_results` VALUES (58, 'Corn___Cercospora_leaf_spot Gray_leaf_spot', 0.8212624490261078, '注意田间管理，加强虫害监测与综合防治', '/uploads/14596fad2df140d7b33470366e81232d.jpg', '2025-11-20 21:39:22.010010', 'Corn___Cercospora_leaf_spot Gray_leaf_spot', NULL, 15, '82828282');
+INSERT INTO `detect_results` VALUES (52, 'Tomato___Late_blight', 0.9562494158744812, '注意田间管理，加强虫害监测与综合防治', '/uploads/74ea557c75444b56a9d5a248ebda828c.jpg', '2025-11-20 14:20:41.305975', 'Tomato___Late_blight', NULL, 11, '88888888', NULL);
+INSERT INTO `detect_results` VALUES (53, 'Apple___Bacterial_spot', 0.38000649213790894, '注意田间管理，加强虫害监测与综合防治', '/uploads/691af55940f5461296f8b5f962a3345e.jpg', '2025-11-20 15:15:33.940757', 'Apple___Bacterial_spot', NULL, 12, '11111111', NULL);
+INSERT INTO `detect_results` VALUES (54, 'Tomato___Late_blight', 0.9562494158744812, '注意田间管理，加强虫害监测与综合防治', '/uploads/98af42a84b3a400b9e7de0172efc7aff.jpg', '2025-11-20 16:59:55.525179', 'Tomato___Late_blight', NULL, 16, '00000000', NULL);
+INSERT INTO `detect_results` VALUES (106, 'Background_without_leaves', 0.9986956715583801, '注意田间管理，加强虫害监测与综合防治', '/uploads/c2632ddce26b456a83f72623e4f24617.jpg', '2025-11-21 22:17:56.296388', 'Background_without_leaves', NULL, 6, 'admin601', NULL);
+INSERT INTO `detect_results` VALUES (107, 'Corn___Cercospora_leaf_spot Gray_leaf_spot', 0.8212624490261078, '病害发生前（防）：选择抗病品种，合理密植和轮作，减少玉米残株留在田间；在病害流行前或发病初期喷施系统性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对玉米灰斑病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '/uploads/738eee4d8d404a7aba9a8db3a70e6829.jpg', '2025-11-21 22:18:09.677823', 'Corn___Cercospora_leaf_spot Gray_leaf_spot', NULL, 6, 'admin601', NULL);
+INSERT INTO `detect_results` VALUES (108, 'Tomato___Late_blight', 0.9562494158744812, '病害发生前（防）：选用抗病品种，避免低洼积水地种植；加强通风排湿；在流行前和发病初期喷施晚疫病专用杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄晚疫病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '/uploads/52d88be502be4e4787d85e86a59da865.jpg', '2025-11-21 22:18:15.866489', 'Tomato___Late_blight', NULL, 6, 'admin601', NULL);
+INSERT INTO `detect_results` VALUES (109, 'Tomato___Late_blight', 0.9562494158744812, '病害发生前（防）：选用抗病品种，避免低洼积水地种植；加强通风排湿；在流行前和发病初期喷施晚疫病专用杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄晚疫病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '/uploads/7017e73ecb7348da8eb43c2660de9ec0.jpg', '2025-11-21 22:29:27.496105', 'Tomato___Late_blight', NULL, 6, 'admin601', NULL);
+INSERT INTO `detect_results` VALUES (110, 'Tomato___Late_blight', 0.9562494158744812, '病害发生前（防）：选用抗病品种，避免低洼积水地种植；加强通风排湿；在流行前和发病初期喷施晚疫病专用杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄晚疫病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '/uploads/2f124d6c55c343e4a1f4d3b70e51f83d.jpg', '2025-11-21 22:57:55.688433', 'Tomato___Late_blight', NULL, 6, 'admin601', '/api/detect/reports/admin601_20251121225755_番茄晚疫病.pdf');
+INSERT INTO `detect_results` VALUES (118, 'Corn___Cercospora_leaf_spot Gray_leaf_spot', 0.8212624490261078, '病害发生前（防）：选择抗病品种，合理密植和轮作，减少玉米残株留在田间；在病害流行前或发病初期喷施系统性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对玉米灰斑病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '/uploads/31b23bf0daaa48578ce957188524beab.jpg', '2025-11-22 12:45:35.485269', 'Corn___Cercospora_leaf_spot Gray_leaf_spot', NULL, 6, 'admin601', NULL);
+INSERT INTO `detect_results` VALUES (119, 'Tomato___Late_blight', 0.9562494158744812, '病害发生前（防）：选用抗病品种，避免低洼积水地种植；加强通风排湿；在流行前和发病初期喷施晚疫病专用杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄晚疫病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '/uploads/70c5fcc5618d4c95880d5c1ee7ed1e10.jpg', '2025-11-22 12:45:48.477042', 'Tomato___Late_blight', NULL, 6, 'admin601', NULL);
+INSERT INTO `detect_results` VALUES (120, 'Corn___Cercospora_leaf_spot Gray_leaf_spot', 0.8212624490261078, '病害发生前（防）：选择抗病品种，合理密植和轮作，减少玉米残株留在田间；在病害流行前或发病初期喷施系统性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对玉米灰斑病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '/uploads/4a5f2a9859164e1180285b69ab969d82.jpg', '2025-11-22 13:54:56.813577', 'Corn___Cercospora_leaf_spot Gray_leaf_spot', NULL, 11, '88888888', NULL);
+INSERT INTO `detect_results` VALUES (126, 'Cherry___Leaf_scorch', 0.34255701303482056, '注意田间管理，加强虫害监测与综合防治', '/uploads/acb70f5858ff4b53a1eae9b216b37314.jpg', '2025-11-25 17:14:51.593138', 'Cherry___Leaf_scorch', NULL, 11, '88888888', NULL);
+INSERT INTO `detect_results` VALUES (127, 'Apple___Bacterial_spot', 0.38000649213790894, '注意田间管理，加强虫害监测与综合防治', '/uploads/1b75926c449d439ba67f5b57e815ffdd.jpg', '2025-12-09 16:48:02.941771', 'Apple___Bacterial_spot', NULL, 11, '88888888', NULL);
+INSERT INTO `detect_results` VALUES (128, 'Corn___Cercospora_leaf_spot Gray_leaf_spot', 0.8212624490261078, '病害发生前（防）：选择抗病品种，合理密植和轮作，减少玉米残株留在田间；在病害流行前或发病初期喷施系统性杀菌剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对玉米灰斑病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '/uploads/f3b1535ae6b94c7dadb44ad7e79a9267.jpg', '2025-12-09 16:48:09.318489', 'Corn___Cercospora_leaf_spot Gray_leaf_spot', NULL, 11, '88888888', NULL);
+INSERT INTO `detect_results` VALUES (129, 'Tomato___Bacterial_spot', 0.6008535325527191, '病害发生前（防）：选择健康种子并进行种子消毒；避免大水漫灌，减少叶面长期积水；发病初期喷施含铜制剂等细菌性药剂。 病害发生后（治）：发病后应根据田间实际病情，结合当地植保部门或农业技术人员建议，选择对番茄细菌性斑点病 有效的药剂进行防治，并注意轮换用药和安全间隔期。', '/uploads/d794c0efc52648978a9b2d3e71297ff1.jpg', '2025-12-09 16:48:14.182203', 'Tomato___Bacterial_spot', NULL, 11, '88888888', NULL);
 
 -- ----------------------------
 -- Table structure for disease_info
@@ -239,7 +312,7 @@ CREATE TABLE `disease_info`  (
   `sample_image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of disease_info
@@ -260,10 +333,30 @@ CREATE TABLE `diseases`  (
   `plant` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `uk_diseases_model_label`(`model_label`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of diseases
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for favorite_items
+-- ----------------------------
+DROP TABLE IF EXISTS `favorite_items`;
+CREATE TABLE `favorite_items`  (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `item_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `FKm8l8bsbbn4c72l3por2vakx7d`(`item_id`) USING BTREE,
+  INDEX `FKmcicth3vly9ytekmo9es5vtri`(`user_id`) USING BTREE,
+  CONSTRAINT `FKm8l8bsbbn4c72l3por2vakx7d` FOREIGN KEY (`item_id`) REFERENCES `fzwp` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `FKmcicth3vly9ytekmo9es5vtri` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of favorite_items
 -- ----------------------------
 
 -- ----------------------------
@@ -279,7 +372,7 @@ CREATE TABLE `feedback`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_feedback_user_id`(`user_id`) USING BTREE,
   CONSTRAINT `fk_feedback_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of feedback
@@ -294,19 +387,18 @@ CREATE TABLE `fzwp`  (
   `创建时间` datetime(6) NULL DEFAULT NULL,
   `物品图片` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `物品名称` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `植物名称` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `上架时间` datetime(6) NULL DEFAULT NULL,
-  `主要功能` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
   `物品价格` decimal(10, 2) NULL DEFAULT NULL,
   `应对病害` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `更新时间` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fzwp
 -- ----------------------------
-INSERT INTO `fzwp` VALUES (1, '2025-11-19 15:03:09.222293', '/uploads/fzwp/4fd6a91c01b74ff9814236ea0f0ee0ba.jpg', '风格的服饰', '2025-11-19 15:03:09.212474', '', 22.00, '', '2025-11-19 15:03:09.222293');
-INSERT INTO `fzwp` VALUES (2, '2025-11-19 15:03:45.930959', '/uploads/fzwp/e5046701761945ff9c6cf81695424bc2.jpg', 'ijo', '2025-11-19 15:03:45.929448', '', 0.00, '', '2025-11-19 15:03:45.930959');
+INSERT INTO `fzwp` VALUES (7, '2025-11-21 22:16:13.663108', '/uploads/fzwp/6baadcc777864226a49eacd237cd92ea.jpg', '啊大多数', '番茄', '2025-11-21 22:16:13.662107', 88.00, '番茄晚疫病', '2025-11-21 22:17:17.875279');
 
 -- ----------------------------
 -- Table structure for guide_article_comments
@@ -326,7 +418,7 @@ CREATE TABLE `guide_article_comments`  (
   CONSTRAINT `FK75ohgkv7ugou700xhjygbbygj` FOREIGN KEY (`article_id`) REFERENCES `guide_articles` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKpqx4ljkymja36s7vw3866m21l` FOREIGN KEY (`author_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKspq09rm1wh7ymxqayxdn321vr` FOREIGN KEY (`parent_id`) REFERENCES `guide_article_comments` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of guide_article_comments
@@ -335,6 +427,27 @@ INSERT INTO `guide_article_comments` VALUES (1, '比较方便的巴萨不对吧'
 INSERT INTO `guide_article_comments` VALUES (2, '阿达伟大我', '2025-11-20 16:11:15.273661', 1, 12, NULL);
 INSERT INTO `guide_article_comments` VALUES (3, '阿达伟大ddw', '2025-11-20 16:26:03.842352', 2, 11, NULL);
 INSERT INTO `guide_article_comments` VALUES (4, '返回给风格化法国', '2025-11-20 16:43:45.224856', 2, 15, 3);
+
+-- ----------------------------
+-- Table structure for guide_article_favorites
+-- ----------------------------
+DROP TABLE IF EXISTS `guide_article_favorites`;
+CREATE TABLE `guide_article_favorites`  (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `article_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `FK4cwb9n00mrts4h165kgfx8asn`(`article_id`) USING BTREE,
+  INDEX `FKiw6gf7crusgoiyua4wftlsif`(`user_id`) USING BTREE,
+  CONSTRAINT `FK4cwb9n00mrts4h165kgfx8asn` FOREIGN KEY (`article_id`) REFERENCES `guide_articles` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `FKiw6gf7crusgoiyua4wftlsif` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of guide_article_favorites
+-- ----------------------------
+INSERT INTO `guide_article_favorites` VALUES (2, '2025-11-22 13:48:10.429332', 1, 11);
 
 -- ----------------------------
 -- Table structure for guide_article_recommendations
@@ -355,8 +468,6 @@ CREATE TABLE `guide_article_recommendations`  (
 -- ----------------------------
 -- Records of guide_article_recommendations
 -- ----------------------------
-INSERT INTO `guide_article_recommendations` VALUES (1, NULL, 1, 1);
-INSERT INTO `guide_article_recommendations` VALUES (2, NULL, 2, 2);
 
 -- ----------------------------
 -- Table structure for guide_articles
@@ -380,7 +491,61 @@ CREATE TABLE `guide_articles`  (
 -- Records of guide_articles
 -- ----------------------------
 INSERT INTO `guide_articles` VALUES (1, '伟大啊麦当劳看完的空间那就开始吧当年马上都那么撒是你吧点击江阿不都开往北京的吧卡无边的恐惧把控但是就不打搅卡巴是', NULL, '2025-11-20 16:10:51.418637', NULL, '湖底归属地', '2025-11-20 16:10:51.418637', 12);
-INSERT INTO `guide_articles` VALUES (2, '刚好放假回国法国海军北海v改过一次v有\n<img src=\"/uploads/chat/7c185d62f994428d838db7d8f1440fe6.jpg\" alt=\"图片\" />', '/uploads/chat/d71de65886b849359e59bcc990a908fd.jpg', '2025-11-20 16:25:38.560254', '[\"/uploads/chat/7c185d62f994428d838db7d8f1440fe6.jpg\",\"/uploads/chat/29b08b26056d470c95e36277d61a3caf.jpg\",\"/uploads/chat/59b92bd56f934c67a6a4b5daa29f3af0.jpg\"]', '恢复和官方公布', '2025-11-20 16:44:21.971768', 11);
+INSERT INTO `guide_articles` VALUES (2, '刚好放假回国法国海军北海v改过一\n<img src=\"http://localhost:8099/uploads/chat/7c185d62f994428d838db7d8f1440fe6.jpg\" alt=\"图片\" />\n次v有\n<img src=\"/uploads/chat/7c185d62f994428d838db7d8f1440fe6.jpg\" alt=\"图片\" />\n<img src=\"http://localhost:8099/uploads/chat/7c185d62f994428d838db7d8f1440fe6.jpg\" alt=\"图片\" />', '/uploads/chat/d71de65886b849359e59bcc990a908fd.jpg', '2025-11-20 16:25:38.560254', '[\"/uploads/chat/7c185d62f994428d838db7d8f1440fe6.jpg\",\"/uploads/chat/29b08b26056d470c95e36277d61a3caf.jpg\",\"/uploads/chat/59b92bd56f934c67a6a4b5daa29f3af0.jpg\"]', '恢复和官方公布', '2025-12-02 11:47:18.276292', 11);
+
+-- ----------------------------
+-- Table structure for shop_order_items
+-- ----------------------------
+DROP TABLE IF EXISTS `shop_order_items`;
+CREATE TABLE `shop_order_items`  (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `line_total` decimal(12, 2) NOT NULL,
+  `quantity` int NOT NULL,
+  `unit_price` decimal(10, 2) NOT NULL,
+  `item_id` bigint NOT NULL,
+  `order_id` bigint NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `FK7t33xvx4bk5xv56m0jq5c31f7`(`item_id`) USING BTREE,
+  INDEX `FKprcx34kogn2i7skf69p5xsrsg`(`order_id`) USING BTREE,
+  CONSTRAINT `FK7t33xvx4bk5xv56m0jq5c31f7` FOREIGN KEY (`item_id`) REFERENCES `fzwp` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `FKprcx34kogn2i7skf69p5xsrsg` FOREIGN KEY (`order_id`) REFERENCES `shop_orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of shop_order_items
+-- ----------------------------
+INSERT INTO `shop_order_items` VALUES (1, 0.00, 1, 0.00, 7, 1);
+INSERT INTO `shop_order_items` VALUES (2, 88.00, 1, 88.00, 7, 2);
+INSERT INTO `shop_order_items` VALUES (3, 88.00, 1, 88.00, 7, 3);
+INSERT INTO `shop_order_items` VALUES (4, 88.00, 1, 88.00, 7, 4);
+INSERT INTO `shop_order_items` VALUES (5, 88.00, 1, 88.00, 7, 5);
+INSERT INTO `shop_order_items` VALUES (6, 88.00, 1, 88.00, 7, 6);
+
+-- ----------------------------
+-- Table structure for shop_orders
+-- ----------------------------
+DROP TABLE IF EXISTS `shop_orders`;
+CREATE TABLE `shop_orders`  (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `status` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `total_amount` decimal(12, 2) NOT NULL,
+  `user_id` bigint NOT NULL,
+  `shipping_address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `FKj4qixku05sstqepfps9jrq132`(`user_id`) USING BTREE,
+  CONSTRAINT `FKj4qixku05sstqepfps9jrq132` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of shop_orders
+-- ----------------------------
+INSERT INTO `shop_orders` VALUES (1, '2025-11-21 22:16:53.226304', 'COMPLETED', 0.00, 15, NULL);
+INSERT INTO `shop_orders` VALUES (2, '2025-11-21 22:58:04.899169', 'CREATED', 88.00, 6, NULL);
+INSERT INTO `shop_orders` VALUES (3, '2025-11-22 14:19:49.672328', 'COMPLETED', 88.00, 15, '云南省大理白族自治州大理');
+INSERT INTO `shop_orders` VALUES (4, '2025-11-22 15:40:17.459892', 'COMPLETED', 88.00, 15, '云南省大理白族自治州大理');
+INSERT INTO `shop_orders` VALUES (5, '2025-11-22 16:54:27.035500', 'COMPLETED', 88.00, 15, '云南省大理白族自治州大理');
+INSERT INTO `shop_orders` VALUES (6, '2025-12-09 16:48:42.598734', 'CREATED', 88.00, 11, '大理');
 
 -- ----------------------------
 -- Table structure for user_friendships
@@ -396,7 +561,7 @@ CREATE TABLE `user_friendships`  (
   INDEX `FK9bn6wxhlyeednpi1o3ff9f9ma`(`friend_id`) USING BTREE,
   CONSTRAINT `FK9bn6wxhlyeednpi1o3ff9f9ma` FOREIGN KEY (`friend_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT,
   CONSTRAINT `FKc3loqbh68jxojn42c5wsxhtwv` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user_friendships
@@ -424,6 +589,7 @@ CREATE TABLE `users`  (
   `role` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'user',
   `user_type` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT 'farmer',
   `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `uk_users_username`(`username`) USING BTREE,
   UNIQUE INDEX `uk_users_email`(`email`) USING BTREE,
@@ -433,12 +599,12 @@ CREATE TABLE `users`  (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (6, 'admin601', '$2a$10$ZHeD3738g.Rj4HwtqWQkDukxRSWkEp.VwVZyXoareEefX0yWSJvZ.', '2025-11-12 23:50:57.705493', '系统管理员', 'admin601@example.com', NULL, 1, 'admin', 'admin', NULL);
-INSERT INTO `users` VALUES (11, '88888888', '$2a$10$Ne.FsZ37IIHDfLDCjOCXouleqQKIm3FulC7LuLofCLt9lLkMWbp/a', '2025-11-13 20:58:45.749810', '农情专家', NULL, '/uploads/avatars/a404527240b242d5af863ef9deb3cd91.jpg', 1, 'user', 'expert', NULL);
-INSERT INTO `users` VALUES (12, '11111111', '$2a$10$wJ8PrtlgPJHMrnHf75M6p.5NuAKtK02rNLh6HEOvcESMzfFix9AfS', '2025-11-19 14:13:05.182408', '11111111', NULL, NULL, 1, 'user', 'expert', '11111111111');
-INSERT INTO `users` VALUES (13, '12345678', '$2a$10$lOlOJg7c/2x5lsRDoxx/1e.mGpVntvyPiUef2KMjXncxyT2iTrVGC', '2025-11-19 20:41:35.136681', '张炳林', NULL, 'https://api.dicebear.com/7.x/identicon/svg?seed=12345678', 1, 'user', 'farmer', '12345678900');
-INSERT INTO `users` VALUES (15, '82828282', '$2a$10$EqMfRgv.SQ8zGw/y2EdXiOT.ZDooYcV6pe2UClkLfTKV0UkRTiHly', '2025-11-19 21:39:58.651357', 'laffey-82', NULL, '/uploads/avatars/b7a6c6430fc544f88f265b607332fb46.jpg', 1, 'user', 'farmer', '18888888888');
-INSERT INTO `users` VALUES (16, '00000000', '$2a$10$yslZI0ik02FEPUvyOnse9.cQtceCefaWK21EZoOA6cpckl5wLtYim', '2025-11-20 16:58:38.255280', 'jkl', NULL, '/uploads/avatars/d4b14cb972a44b00a4e6bc0b81e6ec67.jpg', 1, 'user', 'expert', '12345678901');
+INSERT INTO `users` VALUES (6, 'admin601', '$2a$10$ZHeD3738g.Rj4HwtqWQkDukxRSWkEp.VwVZyXoareEefX0yWSJvZ.', '2025-11-12 23:50:57.705493', '系统管理员', 'admin601@example.com', NULL, 1, 'admin', 'admin', NULL, NULL);
+INSERT INTO `users` VALUES (11, '88888888', '$2a$10$Ne.FsZ37IIHDfLDCjOCXouleqQKIm3FulC7LuLofCLt9lLkMWbp/a', '2025-11-13 20:58:45.749810', '农情专家', NULL, '/uploads/avatars/a404527240b242d5af863ef9deb3cd91.jpg', 1, 'user', 'expert', NULL, '大理');
+INSERT INTO `users` VALUES (12, '11111111', '$2a$10$wJ8PrtlgPJHMrnHf75M6p.5NuAKtK02rNLh6HEOvcESMzfFix9AfS', '2025-11-19 14:13:05.182408', '11111111', NULL, NULL, 1, 'user', 'expert', '11111111111', NULL);
+INSERT INTO `users` VALUES (13, '12345678', '$2a$10$lOlOJg7c/2x5lsRDoxx/1e.mGpVntvyPiUef2KMjXncxyT2iTrVGC', '2025-11-19 20:41:35.136681', '张炳林', NULL, 'https://api.dicebear.com/7.x/identicon/svg?seed=12345678', 1, 'user', 'farmer', '12345678900', NULL);
+INSERT INTO `users` VALUES (15, '82828282', '$2a$10$EqMfRgv.SQ8zGw/y2EdXiOT.ZDooYcV6pe2UClkLfTKV0UkRTiHly', '2025-11-19 21:39:58.651357', 'laffey-82', NULL, '/uploads/avatars/b7a6c6430fc544f88f265b607332fb46.jpg', 1, 'user', 'farmer', '18888888888', '云南省大理白族自治州大理');
+INSERT INTO `users` VALUES (16, '00000000', '$2a$10$yslZI0ik02FEPUvyOnse9.cQtceCefaWK21EZoOA6cpckl5wLtYim', '2025-11-20 16:58:38.255280', 'jkl', NULL, '/uploads/avatars/d4b14cb972a44b00a4e6bc0b81e6ec67.jpg', 1, 'user', 'expert', '12345678901', NULL);
 
 -- ----------------------------
 -- Procedure structure for migrate_users_cleanup
