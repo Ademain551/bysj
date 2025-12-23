@@ -1,0 +1,18 @@
+{
+  "data_root": "E:\\Users\\LENOVO\\Desktop\\mtjbysj\\pymodel\\data\\PlantVillage",
+  "batch_size": 16,
+  "image_size": 224,
+  "epochs": 30,
+  "learning_rate": 0.0001,
+  "weight_decay": 1e-05,
+  "device": "cpu",
+  "unfreeze_last_blocks": 10,
+  "early_stop_patience": 7,
+  "label_smoothing": 0.1,
+  "use_amp": true,
+  "use_balanced_sampler": true,
+  "train_max_per_class": 0,
+  "num_classes": 21,
+  "experiment_name": "20251223_195724",
+  "timestamp": "2025-12-23T19:57:24.573265"
+}

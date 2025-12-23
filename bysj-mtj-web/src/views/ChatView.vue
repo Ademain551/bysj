@@ -674,6 +674,69 @@ async function deleteMessage(msg: ChatMessage) {
   }
 }
 
+async function addFriend() {
+  if (!friendQuery.value.trim()) {
+    showFriendFeedback('error', '请输入对方账号或手机号')
+    return
+  }
+  if (!currentUser?.username) {
+    showFriendFeedback('error', '请先登录')
+    return
+  }
+  addingFriend.value = true
+  try {
+    const resp = await apiFetch('/friends/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        requester: currentUser.username,
+        target: friendQuery.value.trim()
+      })
+    })
+    const data = await resp.json()
+    if (!resp.ok || !data.success) {
+      throw new Error(data.message || '添加好友失败')
+    }
+    showFriendFeedback('success', data.message || '添加好友成功')
+    friendQuery.value = ''
+    // Refresh friends list and rooms
+    await fetchFriends()
+    await fetchRooms()
+  } catch (e: any) {
+    showFriendFeedback('error', e.message || '添加好友失败')
+  } finally {
+    addingFriend.value = false
+  }
+}
+
+async function openDirectWith(otherUsername: string) {
+  if (!username || !otherUsername) return
+  try {
+    const resp = await apiFetch('/chat/rooms/direct', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userA: username, userB: otherUsername })
+    })
+    if (!resp.ok) {
+      const text = await resp.text().catch(() => '')
+      throw new Error(text || '创建会话失败')
+    }
+    const data = await resp.json()
+    const roomId = data?.id
+    if (!roomId) {
+      throw new Error('未获取到会话编号')
+    }
+    // Check if room already exists in local list
+    const existing = rooms.value.find(r => r.id === roomId)
+    if (!existing) {
+      await fetchRooms() // Refresh rooms list
+    }
+    activeRoomId.value = roomId
+  } catch (e: any) {
+    ElMessage.error(e.message || '打开会话失败')
+  }
+}
+
 onMounted(async () => {
   await fetchFriends()
   await fetchRooms()

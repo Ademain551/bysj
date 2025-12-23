@@ -1,7 +1,7 @@
 {
-  "num_samples": 60343,
+  "num_samples": 60435,
   "num_classes": 21,
-  "path_hash": "c3eb654556a60c1a19b9a686f2db844c",
+  "path_hash": "f1a1dd15749e28e6fcabea1ebf2bf50e",
   "classes": [
     "Apple_scab",
     "Bacterial_spot",

@@ -44,7 +44,7 @@ import org.springframework.core.io.UrlResource;
 @RestController
 @RequestMapping("/api/detect")
 @RequiredArgsConstructor
-@CrossOrigin
+@CrossOrigin(allowCredentials = "true", origins = "http://localhost:5173")
 @Slf4j
 @SuppressWarnings("null")
 public class DetectController {
@@ -851,7 +851,8 @@ public class DetectController {
                     if (!imageUrl.isBlank()) {
                         try {
                             String rel = imageUrl.startsWith("/") ? imageUrl.substring(1) : imageUrl;
-                            Path imagePath = Path.of(rel);
+                            // 使用项目根目录作为基准路径，确保在不同环境下都能正确找到图片
+                            Path imagePath = Path.of(System.getProperty("user.dir"), rel).normalize();
                             if (Files.exists(imagePath)) {
                                 PDImageXObject image = PDImageXObject.createFromFileByContent(imagePath.toFile(), doc);
                                 float imgMaxWidth = pageWidth - margin * 2;
@@ -866,9 +867,11 @@ public class DetectController {
                                 float imgY = y - imgHeight;
                                 content.drawImage(image, imgX, imgY, imgWidth, imgHeight);
                                 y = imgY - 24;
+                            } else {
+                                log.warn("PDF生成时找不到图像文件: {}", imagePath.toString());
                             }
                         } catch (Exception e) {
-                            log.warn("将识别图片绘制到PDF失败: {}", e.getMessage());
+                            log.warn("将识别图片绘制到PDF失败: {}", e.getMessage(), e);
                         }
                     }
 
@@ -898,9 +901,15 @@ public class DetectController {
                         content.showText("防治建议:");
 
                         String text = advice.replace('\n', ' ');
-                        int maxLen = 35;
-                        for (int i = 0; i < text.length(); i += maxLen) {
-                            String line = text.substring(i, Math.min(text.length(), i + maxLen));
+                        // 计算每行可容纳的字符数，基于字体大小和页面宽度
+                        float availableWidth = pageWidth - margin * 2;
+                        float fontSize = 12f;
+                        float charWidth = cnFont.getStringWidth("中") / 1000 * fontSize;
+                        int maxCharsPerLine = (int) Math.floor(availableWidth / charWidth);
+                        maxCharsPerLine = Math.max(20, Math.min(40, maxCharsPerLine)); // 限制在20-40个字符之间
+
+                        for (int i = 0; i < text.length(); i += maxCharsPerLine) {
+                            String line = text.substring(i, Math.min(text.length(), i + maxCharsPerLine));
                             content.newLineAtOffset(0, -16);
                             content.showText(line);
                         }

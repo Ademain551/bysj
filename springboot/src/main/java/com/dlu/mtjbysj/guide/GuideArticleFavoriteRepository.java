@@ -11,4 +11,6 @@ public interface GuideArticleFavoriteRepository extends JpaRepository<GuideArtic
     List<GuideArticleFavorite> findByUserOrderByCreatedAtDesc(User user);
 
     Optional<GuideArticleFavorite> findByUserAndArticle(User user, GuideArticle article);
+
+    void deleteAllByArticleId(Long articleId);
 }

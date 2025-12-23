@@ -244,7 +244,7 @@ function downloadReport() {
 	const full = ensureReportUrl()
 	if (!full) return
 	// 通过 fetch 获取 PDF Blob，再用 blob URL 触发下载，避免跨域下载属性被忽略导致页面跳转
-	fetch(full)
+	fetch(full, { credentials: 'include' })
 		.then(async (resp) => {
 			if (!resp.ok) {
 				const text = await resp.text().catch(() => '')
@@ -295,6 +295,8 @@ async function generateReport() {
 		if (typeof data.reportUrl === 'string') {
 			result.reportUrl = data.reportUrl
 			ElMessage.success('识别报告生成成功')
+			// 生成成功后自动下载报告
+			downloadReport()
 		} else {
 			ElMessage.error('生成识别报告失败：返回数据不正确')
 		}

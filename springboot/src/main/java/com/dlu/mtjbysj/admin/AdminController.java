@@ -17,6 +17,7 @@ import com.dlu.mtjbysj.guide.GuideArticle;
 import com.dlu.mtjbysj.guide.GuideArticleRepository;
 import com.dlu.mtjbysj.guide.GuideArticleComment;
 import com.dlu.mtjbysj.guide.GuideArticleCommentRepository;
+import com.dlu.mtjbysj.guide.GuideArticleFavoriteRepository;
 import com.dlu.mtjbysj.guide.GuideArticleRecommendationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -53,6 +54,7 @@ public class AdminController {
     private final FzwpRepository fzwpRepository;
     private final GuideArticleRepository guideArticleRepository;
     private final GuideArticleCommentRepository guideArticleCommentRepository;
+    private final GuideArticleFavoriteRepository guideArticleFavoriteRepository;
     private final GuideArticleRecommendationRepository guideArticleRecommendationRepository;
     private final ChatService chatService;
     private final JdbcTemplate jdbcTemplate;
@@ -164,6 +166,7 @@ public class AdminController {
         if (!userRepository.existsById(id)) return ResponseEntity.notFound().build();
         try {
             // 先删除该用户的所有关联数据，再删除用户，避免外键约束错误
+            // 聊天相关
             if (tableExists("chat_messages")) {
                 jdbcTemplate.update("DELETE FROM chat_messages WHERE sender_id = ?", id);
             }
@@ -173,6 +176,7 @@ public class AdminController {
             if (tableExists("user_friendships")) {
                 jdbcTemplate.update("DELETE FROM user_friendships WHERE user_id = ? OR friend_id = ?", id, id);
             }
+            // 检测相关
             if (tableExists("detect_error_feedbacks")) {
                 jdbcTemplate.update("DELETE FROM detect_error_feedbacks WHERE farmer_id = ? OR expert_id = ?", id, id);
                 if (tableExists("detect_results")) {
@@ -182,14 +186,58 @@ public class AdminController {
             if (tableExists("detect_results")) {
                 jdbcTemplate.update("DELETE FROM detect_results WHERE user_id = ?", id);
             }
+            // 技术指导相关
+            if (tableExists("guide_article_favorites")) {
+                jdbcTemplate.update("DELETE FROM guide_article_favorites WHERE user_id = ?", id);
+            }
+            if (tableExists("guide_article_comments")) {
+                jdbcTemplate.update("DELETE FROM guide_article_comments WHERE author_id = ?", id);
+            }
+            // 商店相关
+            if (tableExists("shop_order_items")) {
+                // 先删除订单项，因为它们有对订单的外键引用
+                jdbcTemplate.update("DELETE FROM shop_order_items WHERE order_id IN (SELECT id FROM shop_orders WHERE user_id = ?)", id);
+            }
+            if (tableExists("shop_orders")) {
+                jdbcTemplate.update("DELETE FROM shop_orders WHERE user_id = ?", id);
+            }
+            if (tableExists("favorite_items")) {
+                jdbcTemplate.update("DELETE FROM favorite_items WHERE user_id = ?", id);
+            }
+            if (tableExists("cart_items")) {
+                jdbcTemplate.update("DELETE FROM cart_items WHERE user_id = ?", id);
+            }
+            // 公告相关
+            if (tableExists("announcement_reads")) {
+                jdbcTemplate.update("DELETE FROM announcement_reads WHERE user_id = ?", id);
+            }
+            // 通知相关
+            if (tableExists("notifications")) {
+                jdbcTemplate.update("DELETE FROM notifications WHERE recipient_id = ?", id);
+            }
+            // 系统相关
+            if (tableExists("sessions")) {
+                jdbcTemplate.update("DELETE FROM sessions WHERE user_id = ?", id);
+            }
+            if (tableExists("oauth2_authorized_client")) {
+                jdbcTemplate.update("DELETE FROM oauth2_authorized_client WHERE principal_name = ?", id);
+            }
+            // 最后删除用户
             userRepository.deleteById(id);
             return ResponseEntity.ok().build();
         } catch (org.springframework.dao.DataIntegrityViolationException e) {
+            // 捕获外键约束错误并返回更详细的信息
+            String errorMsg = "删除失败：存在关联数据";
+            if (e.getMessage() != null) {
+                errorMsg += ": " + e.getMessage().substring(0, Math.min(200, e.getMessage().length()));
+            }
             return ResponseEntity.status(HttpStatus.CONFLICT)
-                    .body(Map.of("error", "存在关联数据，无法删除"));
+                    .body(Map.of("error", errorMsg));
         } catch (Exception e) {
+            // 捕获其他错误并返回详细信息
+            String errorMsg = "删除失败：" + e.getMessage();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(Map.of("error", e.getMessage()));
+                    .body(Map.of("error", errorMsg, "exception", e.getClass().getSimpleName()));
         }
     }
 
@@ -807,6 +855,7 @@ public class AdminController {
         }
         guideArticleCommentRepository.deleteAllByArticleId(id);
         guideArticleRecommendationRepository.deleteAllByArticleId(id);
+        guideArticleFavoriteRepository.deleteAllByArticleId(id);
         guideArticleRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }
